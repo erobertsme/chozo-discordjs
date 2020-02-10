@@ -1,0 +1,31 @@
+{
+  "name": "chozo-discordjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "nodemon src/run.js",
+    "lint": "eslint --ext .js src",
+    "start": "node src/run.js",
+    "verify": "node src/utils/verify/run.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "discord.js": "^11.5.1",
+    "esm": "^3.2.25",
+    "moment": "^2.24.0",
+    "nedb-async-await": "^0.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2"
+  }
+}
