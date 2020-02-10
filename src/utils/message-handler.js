@@ -30,7 +30,9 @@ const MessageHandler = {
         return
 
       case 'msg':
-        if (client.users.find(user => user.tag === args[0] || user.id === args[0])) {
+        if (client.users.find(user => user.tag === args[0])) {
+          client.users.find(user => user.tag === args[0]).send(messageContent.replace(args[0], ''))
+        } else if (client.users.find(user => user.id === args[0])) {
           client.users.find(user => user.id === args[0]).send(messageContent.replace(args[0], ''))
         } else {
           message.channel.send(`Sorry <@${message.author.id}>, I couldn't find that user.`)
